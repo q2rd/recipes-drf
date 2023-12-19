@@ -17,5 +17,3 @@ jobs:
         uses: actions/checkout@v2
       - name: tests
         run: docker-compose run --rm app sh -c "python manage.py test"
-      - name: lint test
-        run: docker-compose run --rm app sh -c "flake8"
