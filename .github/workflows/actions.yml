@@ -4,8 +4,8 @@ name: Actions for github
 on: [push]
 
 jobs:
-  test-lint:
-    name: flake8 & test
+  test:
+    name: test
     runs-on: ubuntu-20.04
     steps:
       - name: login docker
