@@ -4,7 +4,11 @@ from django.contrib.auth.models import AbstractBaseUser, \
 
 
 class UserManager(BaseUserManager):
+	"""Кастомный менеджер для модели юзера"""
+
 	def create_user(self, email, password=None, **extra_fields):
+		"""Метод для создания обычного пользователя."""
+
 		if not email:
 			raise ValueError('Mail-является обязательным для заполнения.')
 		user = self.model(email=self.normalize_email(email), **extra_fields)
@@ -14,6 +18,8 @@ class UserManager(BaseUserManager):
 		return user
 
 	def create_superuser(self, email, password):
+		"""Метод лдля создания пользователя с суперправами"""
+
 		user = self.create_user(email=email, password=password)
 		user.is_staff = True
 		user.is_superuser = True
