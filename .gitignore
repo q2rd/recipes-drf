@@ -160,4 +160,8 @@ cython_debug/
 .idea/
 .idea
 idea
+
 */migrations
+/migrations
+migrations
+.migrations
