@@ -165,3 +165,4 @@ idea
 /migrations
 migrations
 .migrations
+/app/core/migrations/
